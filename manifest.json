@@ -1,0 +1,11 @@
+{
+    "name": "whalers_on_the_moon",
+    "description": "This is a description that is 250 characters or less",
+    "version_number": "1.0.0",
+    "website_url": "https://www.youtube.com/watch?v=60BjkUtqxPE",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "notnotnotswipez-MoreCompany-1.7.1",
+        "x753-More_Suits-1.3.3"
+    ]
+}
