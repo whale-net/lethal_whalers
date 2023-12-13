@@ -1,3 +1,5 @@
 modpack.zip
 .python-version
 out/*
+*.egg-info
+*.pyc

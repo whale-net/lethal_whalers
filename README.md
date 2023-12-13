@@ -18,7 +18,10 @@ pyenv version
 
 using poetry for once
 ```
-pip install poetry
+https://python-poetry.org/docs/
+
+poetry config virtualenvs.in-project true
+poetry config virtualenvs.prefer-active-python true
 ```
 
 install dependencies
