@@ -1,0 +1,47 @@
+name: Upload to thunderstore
+
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.11.4
+
+    - name: install poetry
+      uses: abatilo/actions-poetry@v2
+      with:
+        poetry-version: 1.7.1
+
+    - name: install with poetry
+      run: poetry install
+
+    - name: pickup number of commits
+      run: export COMMIT_COUNT=1
+      # $(git rev-list --count main)
+
+    - name: generate manifest
+      run: python -m lethal_whalers update-manifest
+
+    - name: Zip up modpack
+      run: |
+        cd modpack
+        zip -r modpack.zip .
+        mv modpack.zip ..
+
+    # TODO - validate
+
+    - name: Publish package
+      run: python -m lethal_whalers upload-modpack
