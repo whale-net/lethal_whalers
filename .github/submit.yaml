@@ -12,17 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout without tags
+    - name: checkout
       uses: actions/checkout@v3
-      with:
-        fetch-depth: 0 # this retrieves tags AND history, not good
+
+    - name: pickup number of commits
+      run: export COMMIT_COUNT=1
+      # $(git rev-list --count main)
+
+    - name: generate manifest
+      run: python -m lethal_whalers update-manifest
 
     - name: Zip up modpack
       run: |
         cd modpack
         zip -r modpack.zip .
+        mv modpack.zip ..
 
-    - validate
+    # TODO - validate
 
     - name: Publish package
-      if: github.event_name == 'release'
+      run: python -m lethal_whalers upload-modpack

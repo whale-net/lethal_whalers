@@ -233,7 +233,7 @@ description = ""
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "openapi_client-0.1.0-py3-none-any.whl", hash = "sha256:c6c80eff91b2b332a7b4e6313c66c69c47f9418931d46562e648d6591106f32a"},
+    {file = "openapi_client-0.1.0-py3-none-any.whl", hash = "sha256:6c837a23863204736a6c488abde66e4e3ed72d0af6f676e49118b0f7a906d9e6"},
 ]
 
 [package.source]
@@ -464,4 +464,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "0e1f4d1663b8de2c71517352cd77c909d1862cd72b6b605dfc8da100d72153b6"
+content-hash = "d2a229fde1461e5d6884ec692ecf3869458f22e9a6bc2a5a56ecbc6c278d0137"
