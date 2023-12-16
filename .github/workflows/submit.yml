@@ -34,7 +34,7 @@ jobs:
       # $(git rev-list --count main)
 
     - name: generate manifest
-      run: python -m lethal_whalers update-manifest
+      run: poetry run python -m lethal_whalers update-manifest
 
     - name: Zip up modpack
       run: |
@@ -45,4 +45,4 @@ jobs:
     # TODO - validate
 
     - name: Publish package
-      run: python -m lethal_whalers upload-modpack
+      run: poetry run python -m lethal_whalers upload-modpack
