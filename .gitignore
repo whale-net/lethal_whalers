@@ -3,3 +3,4 @@ modpack.zip
 out/*
 *.egg-info
 *.pyc
+_version.py

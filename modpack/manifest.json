@@ -1,7 +1,7 @@
 {
  "name": "whalers_on_the_moon",
  "description": "This is a description that is 250 characters or less",
- "version_number": "1.1.1",
+ "version_number": "1.1.2",
  "website_url": "https://www.youtube.com/watch?v=60BjkUtqxPE",
  "dependencies": [
   "BepInEx-BepInExPack-5.4.2100",
@@ -9,7 +9,7 @@
   "x753-More_Suits-1.4.1",
   "Sligili-More_Emotes-1.2.1",
   "anormaltwig-LateCompany-1.0.6",
-  "femboytv-FemboysAndFirearms-1.2.0",
+  "femboytv-FemboysAndFirearms-1.2.1",
   "RugbugRedfern-Skinwalkers-2.0.1",
   "tinyhoot-ShipLoot-1.0.0"
  ]

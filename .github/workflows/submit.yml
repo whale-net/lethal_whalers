@@ -46,3 +46,6 @@ jobs:
 
     - name: Publish package
       run: poetry run python -m lethal_whalers upload-modpack
+      env: 
+        LETHAL_WHALER_API_USER: ${{ secrets.THUNDERSTORE_SA_NAME }}
+        LETHAL_WHALER_API_PASSWORD: ${{ secrets.THUNDERSTORE_SA_API_TOKEN }}
