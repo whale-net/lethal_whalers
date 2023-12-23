@@ -28,6 +28,8 @@ def update_manifest():
     out_json_data = manifest.model_dump_json(indent=True)
     with open(manifest_path, 'w') as manifest_file:
         manifest_file.write(out_json_data)
+    print(patch_version)
+    print(out_json_data)
     
 @click.command()
 def upload_modpack():
