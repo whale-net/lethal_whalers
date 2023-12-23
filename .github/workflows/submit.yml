@@ -41,7 +41,11 @@ jobs:
         zip -r modpack.zip .
       # mv modpack.zip ..
 
-    # TODO - validate
+    - name: upload modpack artifact
+      uses: actions/upload-artifact@v4
+      with:
+        path: modpack/modpack.zip
+        name: modpack.zip
 
     - name: Publish package
       run: poetry run python -m lethal_whalers upload-modpack
