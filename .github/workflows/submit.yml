@@ -30,8 +30,7 @@ jobs:
       run: poetry install
 
     - name: pickup number of commits
-      run: export COMMIT_COUNT=1
-      # $(git rev-list --count main)
+      run: echo "COMMIT_COUNT=$(git rev-list --count main)" >> $GITHUB_ENV
 
     - name: generate manifest
       run: poetry run python -m lethal_whalers update-manifest
